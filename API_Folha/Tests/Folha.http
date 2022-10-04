@@ -1,0 +1,36 @@
+### Listar os funcionários
+GET https://localhost:5001/api/folha/listar
+
+### Cadastrar um funcionário
+POST https://localhost:5001/api/folha/cadastrar
+Content-Type: application/json
+
+{
+    "nome" : "FolhaOut",
+    "cpf" : "12345678911",
+    "salario" : 1000,
+    "ir" : 1000,
+    "inss" : 800,
+    "fgts" : 800,
+    "salarioB" : 800,
+    "criadoem" : "1901-09-20"
+
+}
+
+### Buscar um funcionário pelo CPF
+GET https://localhost:5001/api/folha/buscar/12345678911/09/1900
+
+
+### Deletar um funcionário pelo Id
+DELETE https://localhost:5001/api/folha/deletar/21
+
+### Alterar um funcionário
+PATCH  https://localhost:5001/api/folha/alterar
+Content-Type: application/json
+
+{
+    "id" : 18,
+    "nome" : "Diogo Stei",
+    "salario" : 800,
+    "cpf" : "12345678911"
+}
